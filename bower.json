@@ -1,0 +1,19 @@
+{
+	"name": "veams-utility-grid",
+	"version": "1.0.0",
+	"ignore": [
+		".bowerrc",
+		".gitignore",
+		"bower.json"
+	],
+	"authors": [
+		{
+			"name": "Sebastian Fitzner",
+			"email": "sebastian@veams.org"
+		}
+	],
+	"repository": {
+	  "type": "git",
+	  "url": "git://github.com/Veams/veams-utility-grid.git"
+	}
+}
