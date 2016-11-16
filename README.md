@@ -15,8 +15,14 @@ In general `u-grid.scss` generates a set of grid column classes using namespaces
 - `$grid-offset`: "`offset`"
 
 In combination with a Sass map for all major breakpoints, a specific mixin creates our markup classes which has the following structure: 
-* .{$grid-class-col}-[namespace]-[number] - for a column that covers a specific number of columns (e.g. 1-12 by default)
-* .{$grid-class-col}-[namespace]-{$grid-offset}-[number] - for pushing a col a specific number of columns (e.g. 1-11 by default)
+- .{$grid-class-col}-[namespace]-[number] - for a column that covers a specific number of columns (e.g. 1-12 by default)
+- .{$grid-class-col}-[namespace]-{$grid-offset}-[number] - for pushing a col a specific number of columns (e.g. 1-11 by default)
+
+### Modifier Classes
+
+You can add the following modifiers to `u-grid-row`:
+- `is-collapsed` - Delete the margin on the left (can be set via `settings.gridCollapsed`)
+- `is-equal-height` - Add flex box styles to support equal heights for the columns
 
 ### Usage Examples
-* `is-col-mobile-s-12 is-col-mobile-xl-6 is-col-tablet-p-4 is-col-tablet-p-offset-4 is-col-tablet-l-3 is-col-tablet-l-offset-0`
+- `is-col-mobile-s-12 is-col-mobile-xl-6 is-col-tablet-p-4 is-col-tablet-p-offset-4 is-col-tablet-l-3 is-col-tablet-l-offset-0`
