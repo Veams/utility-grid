@@ -1,18 +1,8 @@
-{{! ---
-utility: u-grid-row
-============================================
+---
+publish: false
+---
 
-Requirements:
-- (only hbs)
-
-Options:
-- gridRowClasses {String} - Modifier classes
-
-Important Notes:
-
---- }}
-
-
-<div class="u-grid-row{{#if gridRowClasses}} {{gridRowClasses}}{{/if}}">
+<div class="u-grid-row{{#is (get options.settings.gridCollapsed) "true"}} is-collapsed{{/is}}{{#if options.settings
+.gridRowClasses}} {{options.settings.gridRowClasses}}{{/if}}">
 	{{{yield}}}
 </div>

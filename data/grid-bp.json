@@ -1,0 +1,31 @@
+{
+	"variations": {
+		"4-grid": {
+			"docs": {
+				"sectionBgColor": "primary-dark",
+				"variationName": "4 Columns Collapsed"
+			},
+			"settings": {
+				"gridContextClass": "default",
+				"gridRowClasses": "is-collapsed",
+				"colClasses": "is-col-mobile-s-6 is-col-mobile-l-3"
+			},
+			"content": {
+				"repeats": 4
+			}
+		},
+		"3-grid": {
+			"docs": {
+				"sectionBgColor": "primary-dark",
+				"variationName": "3 Columns"
+			},
+			"settings": {
+				"gridContextClass": "default",
+				"colClasses": "is-col-mobile-s-12 is-col-mobile-l-4"
+			},
+			"content": {
+				"repeats": 3
+			}
+		}
+	}
+}

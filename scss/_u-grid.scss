@@ -1,32 +1,47 @@
 /* ===================================================
 GRID
 =================================================== */
+@import "./h-grid";
 
 /* ---------------------------------------------------
 Grid Row
 --------------------------------------------------- */
 .u-grid-row {
-	lost-flex-container: row;
+	@include grid-container();
+	width: 100%;
+
+	/*
+	Modifiers
+	----------------------- */
+	&.is-collapsed {
+		@include grid-collapse;
+	}
+
+	&.is-equal-height {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 }
 
 /* ---------------------------------------------------
 Grid Col
 --------------------------------------------------- */
-.u-grid-col {
+/**
+ * Build the grid for each namespace, wrap the col width/offset measurements in their breakpoint media query
+ */
+@each $val in $bp {
 
-	@for $i from 1 through $grid-columns {
+	@if length($val) == 1 {
+		$namespace: nth($val, 1);
+		@include grid-sizes($namespace);
+	} @else {
 
-		&.is-col-#{$i}-boxed {
-			lost-column: $i/$grid-columns $grid-columns/$i 0px;
+		$namespace: nth($val, 1);
+		$size: nth($val, 2);
+
+		@include bp("#{$size}", $min-width: true) {
+			@include grid-sizes($namespace);
 		}
-
-		&.is-col-#{$i} {
-			lost-column: $i/$grid-columns $grid-columns/$i;
-
-			&.isnt-margin {
-				margin-right: 0;
-			}
-		}
-
 	}
 }

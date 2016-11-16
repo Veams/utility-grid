@@ -1,0 +1,36 @@
+/* ===================================================
+MIXINS: GRID
+=================================================== */
+$neat-grid: (
+	columns: 12,
+	gutter: 52px
+) !default;
+
+$class-col: 'is-col' !default;
+$class-off: 'offset' !default;
+
+/**
+ * Generate a set of grid column classes using a namespace
+ *
+ * .#{ $class-col }-[namespace]-[number] for a column that covers a specific number of columns (e.g. 1-12 by default)
+ * .#{ $class-off }-[namespace]-[number] for pushing a col a specific number of columns (e.g. 1-11 by default)
+ */
+
+@mixin grid-sizes( $namespace ) {
+	// Run the loop for as many columns as speficied
+	@for $i from 1 through map-get($neat-grid, columns) {
+		.#{$class-col}-#{$namespace}-#{$i} {
+			@include grid-column($i);
+		}
+	}
+
+	// Offset classes
+	@for $i from 0 through map-get($neat-grid, columns) {
+		// Don't include the .off class for the last column
+		@if ($i != map-get($neat-grid, columns)) {
+			.#{$class-col}-#{$namespace}-#{$class-off}-#{$i} {
+				@include grid-push($i);
+			}
+		}
+	}
+}

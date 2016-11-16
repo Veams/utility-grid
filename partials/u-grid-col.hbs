@@ -1,19 +1,7 @@
-{{! ---
-utility: u-grid-col
-============================================
+---
+publish: false
+---
 
-Requirements:
-- (only hbs)
-
-Options:
-- columns {Number}      - Columns count
-- box {Boolean}         - Columns as box layout
-- noMargin {Boolean}    - set margin to 0 when true
-
-Important Notes:
-
---- }}
-
-<div class="u-grid-col{{#if options.columns}} is-col-{{options.columns}}{{#if options.box}}-boxed{{/if}}{{/if}}{{#if options.noMargin}} isnt-margin{{/if}}">
+<div class="u-grid-col{{#if options.colClasses}} {{options.colClasses}}{{/if}}">
 	{{{yield}}}
 </div>
