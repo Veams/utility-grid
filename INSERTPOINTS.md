@@ -4,14 +4,30 @@
 
 ``` hbs
 {{! @INSERT :: START @id: grid, @tag: utility-partial }}
-{{#wrapWith "u-grid-row"}}
-    {{#wrapWith "u-grid-col" colClasses="is-col-mobile-s-1" }}
-        Col 1
+{{! WrapWith START: Grid Row }}
+{{#wrapWith "u-grid-row" settings=grid.settings}}
+    {{! WrapWith START: Col }}
+    {{#wrapWith "u-grid-col" colClasses="is-col-mobile-s-6 is-col-mobile-l-3" }}
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consectetur corporis cum, deleniti dignissimos ducimus ea eligendi, fugiat fugit illum molestias natus necessitatibus perferendis quasi quidem reiciendis similique ullam voluptatum!
     {{/wrapWith}}
-    {{#wrapWith "u-grid-col" colClasses="is-col-mobile-s-11" }}
-        Col 11
+    {{! WrapWith END: Col }}
+    {{! WrapWith START: Col }}
+    {{#wrapWith "u-grid-col" colClasses="is-col-mobile-s-6 is-col-mobile-l-3" }}
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consectetur corporis cum, deleniti dignissimos ducimus ea eligendi, fugiat fugit illum molestias natus necessitatibus perferendis quasi quidem reiciendis similique ullam voluptatum!
     {{/wrapWith}}
+    {{! WrapWith END: Col }}
+    {{! WrapWith START: Col }}
+    {{#wrapWith "u-grid-col" colClasses="is-col-mobile-s-6 is-col-mobile-l-3" }}
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consectetur corporis cum, deleniti dignissimos ducimus ea eligendi, fugiat fugit illum molestias natus necessitatibus perferendis quasi quidem reiciendis similique ullam voluptatum!
+    {{/wrapWith}}
+    {{! WrapWith END: Col }}
+    {{! WrapWith START: Col }}
+    {{#wrapWith "u-grid-col" colClasses="is-col-mobile-s-6 is-col-mobile-l-3" }}
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consectetur corporis cum, deleniti dignissimos ducimus ea eligendi, fugiat fugit illum molestias natus necessitatibus perferendis quasi quidem reiciendis similique ullam voluptatum!
+    {{/wrapWith}}
+	{{! WrapWith END: Col }}
 {{/wrapWith}}
+{{! WrapWith END: Grid Row }}
 {{! @INSERT :: END }}
 ```
 
@@ -19,7 +35,10 @@
 
 ``` scss
 // @INSERT :: START @tag: scss-import //
-@import "helpers/_h-grid";
 @import "utilities/_u-grid";
+// @INSERT :: END
+
+// @INSERT :: START @tag: scss-import-self-contained //
+@import "../templating/partials/utilities/grid/scss/_u-grid";
 // @INSERT :: END
 ```

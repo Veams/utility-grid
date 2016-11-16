@@ -1,45 +1,22 @@
 # Grid
 
-This blueprint is based on the blueprint of Veams-Components. 
+Bourbon Neat provides a simple grid system, which you can use in your projects. 
 
-It provides a simple grid system, which you can use in your projects. 
-
-Examples: http://examples.veams.org/page-utilities.html#grid 
+With `u-grid` there is implemented a mobile first class based system which is like Bootstrap or Foundation, but you are also flexible enough to just use mixins in your Sass or SCSS files. 
 
 ## Requirements
-- Lost grid (PostCSS) => https://github.com/peterramsing/lost#getting-started
-- wrapWith helper => http://www.veams.org/veams-cli/template-helper/overview.html 
+- Bourbon Neat in Beta => http://neat.bourbon.io/ => `bower install neat#v2.0.0.beta.1 --save-dev`
+- wrapWith helper => https://www.npmjs.com/package/mangony-hbs-helper-wrap-with => `npm install mangony-hbs-helper-wrap-with --save-dev`
 
 ## Usage
 
-### Include: Page
+In general `u-grid.scss` generates a set of grid column classes using namespaces: 
+- `$grid-class-col`: "`is-col`"
+- `$grid-offset`: "`offset`"
 
-``` hbs
-{{! @INSERT :: START @id: grid, @tag: utility-partial }}
-{{#wrapWith "u-grid-row"}}
-    {{#wrapWith "u-grid-col" columns=1 box=true}}
-        Col 1
-    {{/wrapWith}}
-    {{#wrapWith "u-grid-col" columns=11 box=true}}
-        Col 11
-    {{/wrapWith}}
-{{/wrapWith}}
+In combination with a Sass map for all major breakpoints, a specific mixin creates our markup classes which has the following structure: 
+* .{$grid-class-col}-[namespace]-[number] - for a column that covers a specific number of columns (e.g. 1-12 by default)
+* .{$grid-class-col}-[namespace]-{$grid-offset}-[number] - for pushing a col a specific number of columns (e.g. 1-11 by default)
 
-{{#wrapWith "u-grid-row"}}
-	{{#wrapWith "u-grid-col" columns=3 box=false}}
-		Col 3 with gutter
-	{{/wrapWith}}
-	{{#wrapWith "u-grid-col" columns=9 box=false}}
-		Col 9 with gutter
-	{{/wrapWith}}
-{{/wrapWith}}
-{{! @INSERT :: END }}
-```
-
-### Include: SCSS
-
-``` scss
-// @INSERT :: START @tag: scss-import //
-@import "utilities/_u-grid";
-// @INSERT :: END
-```
+### Usage Examples
+* `is-col-mobile-s-12 is-col-mobile-xl-6 is-col-tablet-p-4 is-col-tablet-p-offset-4 is-col-tablet-l-3 is-col-tablet-l-offset-0`

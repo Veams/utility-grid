@@ -1,11 +1,51 @@
 /* ===================================================
 GRID
 =================================================== */
-@import "./h-grid";
+
+/* ---------------------------------------------------
+Global Variables
+--------------------------------------------------- */
+$neat-grid: (
+		columns: 12,
+		gutter: 52px
+) !default;
+$grid-breakpoints: $bp !default; // Needs to be a map
+$grid-class-col: 'is-col' !default;
+$grid-offset: 'offset' !default;
+
+/* ---------------------------------------------------
+Mixin
+--------------------------------------------------- */
+
+/**
+ * Generate a set of grid column classes using a namespace
+ *
+ * .#{ $grid-class-col }-[namespace]-[number] for a column that covers a specific number of columns (e.g. 1-12 by default)
+ * .#{ $grid-class-col }-[namespace]-{ $grid-offset }-[number] for pushing a col a specific number of columns (e.g. 1-11 by default)
+ */
+@mixin grid-sizes( $namespace ) {
+	// Run the loop for as many columns as specified
+	@for $i from 1 through map-get($neat-grid, columns) {
+		.#{$grid-class-col}-#{$namespace}-#{$i} {
+			@include grid-column($i);
+		}
+	}
+
+	// Offset classes
+	@for $i from 0 through map-get($neat-grid, columns) {
+		// Don't include the .off class for the last column
+		@if ($i != map-get($neat-grid, columns)) {
+			.#{$grid-class-col}-#{$namespace}-#{$grid-offset}-#{$i} {
+				@include grid-push($i);
+			}
+		}
+	}
+}
 
 /* ---------------------------------------------------
 Grid Row
 --------------------------------------------------- */
+.is-grid-row,
 .u-grid-row {
 	@include grid-container();
 	width: 100%;
@@ -30,8 +70,7 @@ Grid Col
 /**
  * Build the grid for each namespace, wrap the col width/offset measurements in their breakpoint media query
  */
-@each $val in $bp {
-
+@each $val in $grid-breakpoints {
 	@if length($val) == 1 {
 		$namespace: nth($val, 1);
 		@include grid-sizes($namespace);

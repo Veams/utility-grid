@@ -3,16 +3,14 @@ type: utility
 contextData: grid-bp
 layout: "lyt-docs"
 scssFiles:
-  - _h-grid.scss
   - _u-grid.scss
 subTemplates:
   - u-grid-row
   - u-grid-col
 displayName: "u-grid"
 ---
-
 {{! WrapWith START: Grid Row }}
-{{#wrapWith "u-grid-row" settings=settings}}
+{{#wrapWith "u-grid-row" settings=this.settings}}
 	{{#times content.repeats}}
 		{{! WrapWith START: Col }}
 		{{#wrapWith "u-grid-col" colClasses=../settings.colClasses }}

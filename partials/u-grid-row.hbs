@@ -1,8 +1,7 @@
 ---
 publish: false
 ---
-
-<div class="u-grid-row{{#is (get options.settings.gridCollapsed) "true"}} is-collapsed{{/is}}{{#if options.settings
+<div class="u-grid-row{{#if options.settings.gridCollapsed}} is-collapsed{{/if}}{{#if options.settings
 .gridRowClasses}} {{options.settings.gridRowClasses}}{{/if}}">
 	{{{yield}}}
 </div>
