@@ -8,6 +8,9 @@ With `u-grid` there is implemented a mobile first class based system which is li
 - Bourbon Neat in Beta => http://neat.bourbon.io/ => `bower install neat#v2.0.0.beta.1 --save-dev`
 - wrapWith helper => https://www.npmjs.com/package/mangony-hbs-helper-wrap-with => `npm install mangony-hbs-helper-wrap-with --save-dev`
 
+### Documentation
+- Bourbon Neat: http://thoughtbot.github.io/neat-docs/2-0-0-beta-1/ 
+
 ## Usage
 
 In general `u-grid.scss` generates a set of grid column classes using namespaces: 
