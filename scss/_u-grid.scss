@@ -5,13 +5,21 @@ GRID
 /* ---------------------------------------------------
 Global Variables
 --------------------------------------------------- */
-$neat-grid: (
-		columns: 12,
-		gutter: 52px
+$grid-defaults: (
+	columns: 12,
+	gutter: 52px
 ) !default;
-$grid-breakpoints: $bp !default; // Needs to be a map
+$grid-breakpoints-defaults: (
+	'mobile-s': 320px,
+	'mobile-xl': 657px,
+	'tablet-p': 768px,
+	'tablet-l': 1024px,
+	'desktop': 1440px
+) !default;
 $grid-class-col: 'is-col' !default;
 $grid-offset: 'offset' !default;
+$neat-grid: $grid-defaults;
+$grid-breakpoints: $grid-breakpoints-defaults;
 
 /* ---------------------------------------------------
 Mixin
