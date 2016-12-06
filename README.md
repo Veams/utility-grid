@@ -18,7 +18,7 @@ In general `u-grid.scss` generates a set of grid column classes using namespaces
 - wrapWith helper => _https://www.npmjs.com/package/mangony-hbs-helper-wrap-with => `npm i mangony-hbs-helper-wrap-with --save-dev`_
 
 ### Documentation
-- Bourbon Neat: _http://thoughtbot.github.io/neat-docs/2-0-0-beta-1/ _
+- Bourbon Neat: _http://thoughtbot.github.io/neat-docs/2-0-0-beta-1/_
 
 ------------
 
@@ -31,7 +31,7 @@ In general `u-grid.scss` generates a set of grid column classes using namespaces
 - $grid-class-col {`String`} [`is-col`] - _Column class namespace._
 - $grid-offset {`String`} [`offset`] - _Offset class namespace._
 
-### Output
+### CSS Output
 
 In combination with the Sass map for all major breakpoints, a specific mixin creates our markup classes which has the following structure: 
 - `.{$grid-class-col}-[namesace]-[number]` - _for a column that covers a specific number of columns (e.g. 1-12 by default)_
