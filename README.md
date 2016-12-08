@@ -34,7 +34,7 @@ In general `u-grid.scss` generates a set of grid column classes using namespaces
 ### CSS Output
 
 In combination with the Sass map for all major breakpoints, a specific mixin creates our markup classes which has the following structure: 
-- `.{$grid-class-col}-[namesace]-[number]` - _for a column that covers a specific number of columns (e.g. 1-12 by default)_
+- `.{$grid-class-col}-[namespace]-[number]` - _for a column that covers a specific number of columns (e.g. 1-12 by default)_
 - `.{$grid-class-col}-[namespace]-{$grid-offset}-[number]` - _for pushing a col a specific number of columns (e.g. 1-11 by default)_
 
 ### Modifier Classes
