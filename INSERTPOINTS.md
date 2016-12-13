@@ -38,7 +38,7 @@
 @import "utilities/_u-grid";
 // @INSERT :: END
 
-// @INSERT :: START @tag: scss-import-self-contained //
+// @INSERT :: START @tag: scss-self-contained-import //
 @import "../templating/partials/utilities/grid/scss/_u-grid";
 // @INSERT :: END
 ```
