@@ -1,5 +1,6 @@
 ### v2.0.2
 - Update readme
+- Update comments in scss
 
 ### v2.0.1
 - Update insertpoints
