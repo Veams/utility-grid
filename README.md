@@ -22,6 +22,18 @@ In general `u-grid.scss` generates a set of grid column classes using namespaces
 
 ------------
 
+## Installation
+
+### Installation with Veams
+
+`veams install vu grid`
+
+### Installation with Bower
+
+`bower install veams-utility-grid --save`
+
+------------
+
 ## SASS
 
 ### Variables 
