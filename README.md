@@ -39,7 +39,7 @@ In general `u-grid.scss` generates a set of grid column classes using namespaces
 ### Variables 
 
 - $grid-defaults {`Object`} [`(columns: 12, gutter: 52px)`] - _Default values which will be used in Neat._
-- $grid-defaults {`Object`} [`('mobile-s': 320px, 'mobile-xl': 657px, 'tablet-p': 768px, 'tablet-l': 1024px, 'desktop': 1440px)`] - _Default values which will be used in Neat._
+- $grid-breakpoints-defaults {`Object`} [`('mobile-s': 320px, 'mobile-xl': 657px, 'tablet-p': 768px, 'tablet-l': 1024px, 'desktop': 1440px)`] - _Default values which will be used in Neat._
 - $grid-class-col {`String`} [`is-col`] - _Column class namespace._
 - $grid-offset {`String`} [`offset`] - _Offset class namespace._
 
