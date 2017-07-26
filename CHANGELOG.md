@@ -1,3 +1,7 @@
+### v3.0.0
+- Update source code to support Veams 5 framework
+- Update readme
+
 ### v2.0.3
 - Update readme
 

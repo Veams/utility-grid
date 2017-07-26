@@ -71,3 +71,39 @@ You can add the following modifiers to `u-grid-row|is-grid-row`:
 
 - colClasses {`String`} - _Column and offset classes._
 
+-------------
+
+## Example
+
+Example for overwrite u-grid default settings in _vars.scss:
+
+/* ===================================================
+BREAKPOINT SETTINGS
+=================================================== */
+// Breakpoints
+$bp-mobile-s: 320px;
+$bp-mobile-p: 480px;
+$bp-mobile-l: 600px;
+$bp-mobile-xl: 657px;
+$bp-tablet-p: 768px;
+$bp-tablet-l: 1024px;
+$bp-desktop-m: 1230px;
+$bp-desktop-l: $max-width;
+
+// Breakpoints Map
+$bp: (
+	'mobile-s': $bp-mobile-s,
+	'mobile-p': $bp-mobile-p,
+	'mobile-l': $bp-mobile-l,
+	'mobile-xl': $bp-mobile-xl,
+	'tablet-p': $bp-tablet-p,
+	'tablet-l': $bp-tablet-l,
+	'desktop-m': $bp-desktop-m,
+	'desktop-l': $bp-desktop-l
+);
+
+$grid-breakpoints-defaults: $bp;
+$grid-defaults: (
+	columns: 12,
+	gutter: 36px
+);

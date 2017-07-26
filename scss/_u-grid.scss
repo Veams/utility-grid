@@ -62,7 +62,7 @@ Grid Row
 	Modifiers
 	----------------------- */
 	&.is-collapsed {
-		@include grid-collapse;
+		@include grid-collapse();
 	}
 
 	&.is-equal-height {
