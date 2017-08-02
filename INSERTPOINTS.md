@@ -34,11 +34,7 @@
 ### Include: SCSS
 
 ``` scss
-// @INSERT :: START @tag: scss-import //
-@import "utilities/_u-grid";
-// @INSERT :: END
-
 // @INSERT :: START @tag: scss-self-contained-import //
-@import "../templating/partials/utilities/grid/scss/_u-grid";
+@import "../utilities/grid/scss/_u-grid";
 // @INSERT :: END
 ```
