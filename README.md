@@ -1,5 +1,5 @@
 <p align="right">
-    <a href="https://badge.fury.io/bo/veams-utility-grid"><img src="https://badge.fury.io/bo/veams-utility-grid.svg" alt="Bower version" height="20"></a>
+    <a href="https://badge.fury.io/js/veams-utility-grid"><img src="https://badge.fury.io/js/veams-utility-grid.svg" alt="npm version" height="18"></a>
     <a href="https://gitter.im/Sebastian-Fitzner/Veams?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge"><img src="https://badges.gitter.im/Sebastian-Fitzner/Veams.svg" alt="Gitter Chat" /></a>
 </p>
 
@@ -27,10 +27,6 @@ In general `u-grid.scss` generates a set of grid column classes using namespaces
 ### Installation with Veams
 
 `veams install vu grid`
-
-### Installation with Bower
-
-`bower install veams-utility-grid --save`
 
 ------------
 
