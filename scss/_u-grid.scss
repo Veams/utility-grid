@@ -10,11 +10,31 @@ $grid-defaults: (
 	gutter: 52px
 ) !default;
 $grid-breakpoints-defaults: (
-	'mobile-s': 320px,
-	'mobile-xl': 657px,
-	'tablet-p': 768px,
-	'tablet-l': 1024px,
-	'desktop': 1440px
+	'mobile-s': (
+		columns: 12,
+		gutter: 20px,
+		media: 320px
+	),
+	'mobile-l': (
+		columns: 12,
+		gutter: 20px,
+		media: 657px
+	),
+	'tablet-s': (
+		columns: 12,
+		gutter: 20px,
+		media: 768px
+	),
+	'desktop-l': (
+		columns: 12,
+		gutter: 20px,
+		media: 1024px
+	),
+	'desktop': (
+		columns: 12,
+		gutter: 20px,
+		media: 1440px
+	)
 ) !default;
 $grid-class-col: 'is-col' !default;
 $grid-offset: 'offset' !default;
@@ -31,19 +51,19 @@ Mixin
  * .#{ $grid-class-col }-[namespace]-[number] for a column that covers a specific number of columns (e.g. 1-12 by default)
  * .#{ $grid-class-col }-[namespace]-{ $grid-offset }-[number] for pushing a col a specific number of columns (e.g. 1-11 by default)
  */
-@mixin grid-sizes( $namespace ) {
+@mixin grid-sizes( $bp-map, $key ) {
 	// Run the loop for as many columns as specified
-	@for $i from 1 through map-get($neat-grid, columns) {
-		.#{$grid-class-col}-#{$namespace}-#{$i} {
+	@for $i from 1 through map-get($bp-map, columns) {
+		.#{$grid-class-col}-#{$key}-#{$i} {
 			@include grid-column($i);
 		}
 	}
 
 	// Offset classes
-	@for $i from 0 through map-get($neat-grid, columns) {
+	@for $i from 0 through map-get($bp-map, columns) {
 		// Don't include the .off class for the last column
-		@if ($i != map-get($neat-grid, columns)) {
-			.#{$grid-class-col}-#{$namespace}-#{$grid-offset}-#{$i} {
+		@if ($i != map-get($bp-map, columns)) {
+			.#{$grid-class-col}-#{$key}-#{$grid-offset}-#{$i} {
 				@include grid-push($i);
 			}
 		}
@@ -56,39 +76,63 @@ Grid Row
 .is-grid-row,
 .u-grid-row {
 	@include grid-container();
-	width: 100%;
+	@include clearfix();
 
 	/*
 	Modifiers
 	----------------------- */
 	&.is-collapsed {
-		@include grid-collapse();
+		@each $key in map-keys($grid-breakpoints) {
+			$bp-map: map-get($grid-breakpoints, $key);
+
+			@include grid-media($bp-map) {
+				$gutter: map-get($bp-map, gutter);
+
+				margin-left: -($gutter);
+				margin-right: -($gutter);
+				width: calc(100% + #{($gutter * 2)});
+			}
+		}
 	}
 
 	&.is-equal-height {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: center;
+	}
+
+	&.is-overflow-hidden {
+		overflow: hidden;
 	}
 }
 
 /* ---------------------------------------------------
 Grid Col
 --------------------------------------------------- */
+
 /**
  * Build the grid for each namespace, wrap the col width/offset measurements in their breakpoint media query
  */
-@each $val in $grid-breakpoints {
-	@if length($val) == 1 {
-		$namespace: nth($val, 1);
-		@include grid-sizes($namespace);
-	} @else {
+@each $key in map-keys($grid-breakpoints) {
+	$bp-map: map-get($grid-breakpoints, $key);
 
-		$namespace: nth($val, 1);
-		$size: nth($val, 2);
+	@include grid-media($bp-map) {
+		@include grid-sizes($bp-map, $key);
+		$bp-map: map-get($grid-breakpoints, $key);
+		$gutter: map-get($bp-map, gutter);
 
-		@include bp("#{$size}", $min-width: true) {
-			@include grid-sizes($namespace);
-		}
+	}
+}
+
+.is-grid-col,
+.u-grid-col {
+	position: relative;
+
+	/*
+	Modifiers
+	----------------------- */
+	&.is-equal-height {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
 	}
 }
