@@ -5,7 +5,7 @@
 				"variationName": "4 Columns Collapsed"
 			},
 			"settings": {
-				"gridCollapsed": true,
+				"gridPadding": true,
 				"colClasses": "is-col-mobile-s-6 is-col-mobile-l-3"
 			},
 			"content": {

@@ -64,7 +64,7 @@ You can add the following modifiers to `u-grid-row|is-grid-row`:
 
 ### Grid Row
 
-- settings.gridCollapsed {`Boolean`} - _Delete the margin to the left._ 
+- settings.gridPadding {`Boolean`} [`false`] - _Add the margin to the left._
 - settings.gridClasses {`String`} - _Modifier classes like `is-equal-height`._ 
 
 ### Grid Col
@@ -82,24 +82,38 @@ BREAKPOINT SETTINGS
 =================================================== */
 // Breakpoints
 $bp-mobile-s: 320px;
-$bp-mobile-p: 480px;
 $bp-mobile-l: 600px;
-$bp-mobile-xl: 657px;
-$bp-tablet-p: 768px;
-$bp-tablet-l: 1024px;
-$bp-desktop-m: 1230px;
+$bp-tablet-s: 768px;
+$bp-desktop: 1230px;
 $bp-desktop-l: $max-width;
 
 // Breakpoints Map
 $bp: (
-	'mobile-s': $bp-mobile-s,
-	'mobile-p': $bp-mobile-p,
-	'mobile-l': $bp-mobile-l,
-	'mobile-xl': $bp-mobile-xl,
-	'tablet-p': $bp-tablet-p,
-	'tablet-l': $bp-tablet-l,
-	'desktop-m': $bp-desktop-m,
-	'desktop-l': $bp-desktop-l
+	'mobile-s': (
+        columns: 12,
+        gutter: 20px,
+        media: 320px
+    ),
+    'mobile-l': (
+        columns: 12,
+        gutter: 20px,
+        media: 657px
+    ),
+    'tablet-s': (
+        columns: 12,
+        gutter: 20px,
+        media: 768px
+    ),
+    'desktop-l': (
+        columns: 12,
+        gutter: 20px,
+        media: 1024px
+    ),
+    'desktop': (
+        columns: 12,
+        gutter: 20px,
+        media: 1440px
+    )
 );
 
 $grid-breakpoints-defaults: $bp;
