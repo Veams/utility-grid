@@ -1,0 +1,13 @@
+{
+	"type": "component",
+	"displayName": "u-grid",
+	"contextData": "grid-bp",
+	"layout": "lyt-docs",
+	"subTemplates": [
+		"u-grid-col.hbs",
+		"u-grid-row.hbs"
+	],
+	"scssFiles": [
+		"_u-grid.scss"
+	]
+}

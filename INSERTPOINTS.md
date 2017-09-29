@@ -30,11 +30,3 @@
 {{! WrapWith END: Grid Row }}
 {{! @INSERT :: END }}
 ```
-
-### Include: SCSS
-
-``` scss
-// @INSERT :: START @tag: scss-self-contained-import //
-@import "../utilities/grid/scss/_u-grid";
-// @INSERT :: END
-```
