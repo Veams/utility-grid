@@ -1,5 +1,5 @@
 {
-	"type": "component",
+	"type": "utility",
 	"displayName": "u-grid",
 	"contextData": "grid-bp",
 	"layout": "lyt-docs",

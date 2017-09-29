@@ -1,3 +1,6 @@
+### v5.0.1
+- Fix type in settings 
+
 ### v5.0.0
 - Update folder structure to be in sync with latest generator output
 - Remove import snippets from INSERTPOINTS.md
