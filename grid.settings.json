@@ -1,13 +1,12 @@
 {
 	"type": "utility",
-	"displayName": "u-grid",
 	"contextData": "grid-bp",
 	"layout": "lyt-docs",
 	"subTemplates": [
-		"u-grid-col.hbs",
-		"u-grid-row.hbs"
+		"templates/grid-col.hbs",
+		"templates/grid-row.hbs"
 	],
 	"scssFiles": [
-		"_u-grid.scss"
+		"styles/_grid.scss"
 	]
 }

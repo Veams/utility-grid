@@ -1,3 +1,6 @@
+### v5.1.0
+- Make component compatible with veams-cli@2.0.xx
+
 ### v5.0.1
 - Fix type in settings 
 
