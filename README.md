@@ -76,7 +76,7 @@ You can add the following modifiers to `u-grid-row|is-grid-row`:
 ## Example
 
 Example for overwrite u-grid default settings in _vars.scss:
-
+``` scss
 /* ===================================================
 BREAKPOINT SETTINGS
 =================================================== */
@@ -121,3 +121,4 @@ $grid-defaults: (
 	columns: 12,
 	gutter: 36px
 );
+```
