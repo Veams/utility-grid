@@ -125,6 +125,8 @@ Grid Col
 
 .is-grid-col,
 .u-grid-col {
+	@include grid-column(12);
+
 	position: relative;
 
 	/*

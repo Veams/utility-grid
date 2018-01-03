@@ -1,3 +1,6 @@
+### v5.1.2
+- Default margins #1
+
 ### v5.1.1
 - Fix minor bugs in INSERTPOINTS.md
 - Update README.md
