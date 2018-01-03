@@ -1,3 +1,7 @@
+### v5.1.1
+- Fix minor bugs in INSERTPOINTS.md
+- Update README.md
+
 ### v5.1.0
 - Make component compatible with veams-cli@2.0.xx
 

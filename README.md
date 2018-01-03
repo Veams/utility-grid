@@ -14,11 +14,11 @@ In general `u-grid.scss` generates a set of grid column classes using namespaces
 ------------
 
 ## Requirements
-- Bourbon Neat in Beta => _http://neat.bourbon.io/ => `bower i neat#v2.0.0.beta.1 --save-dev`_
+- Bourbon Neat => _http://neat.bourbon.io/ => `npm i bourbon-neat --save-dev`_
 - wrapWith helper => _https://www.npmjs.com/package/mangony-hbs-helper-wrap-with => `npm i mangony-hbs-helper-wrap-with --save-dev`_
 
 ### Documentation
-- Bourbon Neat: _http://thoughtbot.github.io/neat-docs/2-0-0-beta-1/_
+- Bourbon Neat: _https://neat.bourbon.io/_
 
 ------------
 
@@ -72,6 +72,7 @@ You can add the following modifiers to `u-grid-row|is-grid-row`:
 ## Example
 
 Example for overwrite u-grid default settings in _vars.scss:
+
 ``` scss
 /* ===================================================
 BREAKPOINT SETTINGS
