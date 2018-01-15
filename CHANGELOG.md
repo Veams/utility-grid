@@ -1,3 +1,6 @@
+### v5.1.3
+- Change order of rules.
+
 ### v5.1.2
 - Default margins #1
 

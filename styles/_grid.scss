@@ -108,21 +108,6 @@ Grid Row
 /* ---------------------------------------------------
 Grid Col
 --------------------------------------------------- */
-
-/**
- * Build the grid for each namespace, wrap the col width/offset measurements in their breakpoint media query
- */
-@each $key in map-keys($grid-breakpoints) {
-	$bp-map: map-get($grid-breakpoints, $key);
-
-	@include grid-media($bp-map) {
-		@include grid-sizes($bp-map, $key);
-		$bp-map: map-get($grid-breakpoints, $key);
-		$gutter: map-get($bp-map, gutter);
-
-	}
-}
-
 .is-grid-col,
 .u-grid-col {
 	@include grid-column(12);
@@ -136,5 +121,19 @@ Grid Col
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
+	}
+}
+
+/**
+ * Build the grid for each namespace, wrap the col width/offset measurements in their breakpoint media query
+ */
+@each $key in map-keys($grid-breakpoints) {
+	$bp-map: map-get($grid-breakpoints, $key);
+
+	@include grid-media($bp-map) {
+		@include grid-sizes($bp-map, $key);
+		$bp-map: map-get($grid-breakpoints, $key);
+		$gutter: map-get($bp-map, gutter);
+
 	}
 }
