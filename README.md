@@ -1,9 +1,11 @@
 <p align="right">
-    <a href="https://badge.fury.io/bo/veams-utility-grid"><img src="https://badge.fury.io/bo/veams-utility-grid.svg" alt="Bower version" height="20"></a>
+    <a href="https://badge.fury.io/js/%40veams%2Futility-grid"><img src="https://badge.fury.io/js/%40veams%2Futility-grid.svg" alt="npm version" height="18"></a>
     <a href="https://gitter.im/Sebastian-Fitzner/Veams?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge"><img src="https://badges.gitter.im/Sebastian-Fitzner/Veams.svg" alt="Gitter Chat" /></a>
 </p>
 
 # Grid
+
+## Description
 
 Bourbon Neat provides a simple grid system, which you can use in your projects. 
 
@@ -14,11 +16,11 @@ In general `u-grid.scss` generates a set of grid column classes using namespaces
 ------------
 
 ## Requirements
-- Bourbon Neat in Beta => _http://neat.bourbon.io/ => `bower i neat#v2.0.0.beta.1 --save-dev`_
+- Bourbon Neat => _http://neat.bourbon.io/ => `npm i bourbon-neat --save-dev`_
 - wrapWith helper => _https://www.npmjs.com/package/mangony-hbs-helper-wrap-with => `npm i mangony-hbs-helper-wrap-with --save-dev`_
 
 ### Documentation
-- Bourbon Neat: _http://thoughtbot.github.io/neat-docs/2-0-0-beta-1/_
+- Bourbon Neat: _https://neat.bourbon.io/_
 
 ------------
 
@@ -26,22 +28,35 @@ In general `u-grid.scss` generates a set of grid column classes using namespaces
 
 ### Installation with Veams
 
-`veams install vu grid`
-
-### Installation with Bower
-
-`bower install veams-utility-grid --save`
+`veams install u grid`
 
 ------------
 
-## SASS
+## Fields
 
-### Variables 
+### Grid Row
 
-- $grid-defaults {`Object`} [`(columns: 12, gutter: 52px)`] - _Default values which will be used in Neat._
-- $grid-breakpoints-defaults {`Object`} [`('mobile-s': 320px, 'mobile-xl': 657px, 'tablet-p': 768px, 'tablet-l': 1024px, 'desktop': 1440px)`] - _Default values which will be used in Neat._
-- $grid-class-col {`String`} [`is-col`] - _Column class namespace._
-- $grid-offset {`String`} [`offset`] - _Offset class namespace._
+| Option | Type | Default | Description |
+|:--- |:---:|:---:|:--- |
+|settings.gridPadding | Boolean | [`false`] | _Add the margin to the left._|
+|settings.gridClasses | String | | _Modifier classes like `is-equal-height`._| 
+
+### Grid Col
+
+| Option | Type | Default | Description |
+|:--- |:---:|:---:|:--- |
+|colClasses | String | |_Column and offset classes._|
+
+-------------
+
+## SASS Options
+
+| Option | Type | Default | Description |
+|:--- |:---:|:---:|:--- |
+| $grid-defaults | Object | [`(columns: 12, gutter: 52px)`] | _Default values which will be used in Neat._ |
+| $grid-breakpoints-defaults | Object | [`('mobile-s': 320px, 'mobile-xl': 657px, 'tablet-p': 768px, 'tablet-l': 1024px, 'desktop': 1440px)`] | _Default values which will be used in Neat._ |
+| $grid-class-col | String | [`is-col`] | _Column class namespace._ |
+| $grid-offset | String | [`offset`] | _Offset class namespace._ |
 
 ### CSS Output
 
@@ -60,22 +75,10 @@ You can add the following modifiers to `u-grid-row|is-grid-row`:
 
 -------------
 
-## Fields
-
-### Grid Row
-
-- settings.gridPadding {`Boolean`} [`false`] - _Add the margin to the left._
-- settings.gridClasses {`String`} - _Modifier classes like `is-equal-height`._ 
-
-### Grid Col
-
-- colClasses {`String`} - _Column and offset classes._
-
--------------
-
 ## Example
 
 Example for overwrite u-grid default settings in _vars.scss:
+
 ``` scss
 /* ===================================================
 BREAKPOINT SETTINGS

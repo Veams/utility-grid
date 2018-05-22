@@ -1,19 +1,8 @@
----
-type: utility
-contextData: grid-bp
-layout: "lyt-docs"
-scssFiles:
-  - _u-grid.scss
-subTemplates:
-  - u-grid-row
-  - u-grid-col
-displayName: "u-grid"
----
 {{! WrapWith START: Grid Row }}
-{{#wrapWith "u-grid-row" settings=this.settings}}
+{{#wrapWith "grid-row" settings=this.settings}}
 	{{#times content.repeats}}
 		{{! WrapWith START: Col }}
-		{{#wrapWith "u-grid-col" colClasses=../settings.colClasses }}
+		{{#wrapWith "grid-col" colClasses=../settings.colClasses }}
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consectetur corporis cum, deleniti dignissimos ducimus ea eligendi, fugiat fugit illum molestias natus necessitatibus perferendis quasi quidem reiciendis similique ullam voluptatum!
 		{{/wrapWith}}
 	{{! WrapWith END: Col }}
