@@ -1,9 +1,11 @@
 <p align="right">
-    <a href="https://badge.fury.io/js/veams-utility-grid"><img src="https://badge.fury.io/js/veams-utility-grid.svg" alt="npm version" height="18"></a>
+    <a href="https://badge.fury.io/js/%40veams%2Futility-grid"><img src="https://badge.fury.io/js/%40veams%2Futility-grid.svg" alt="npm version" height="18"></a>
     <a href="https://gitter.im/Sebastian-Fitzner/Veams?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge"><img src="https://badges.gitter.im/Sebastian-Fitzner/Veams.svg" alt="Gitter Chat" /></a>
 </p>
 
 # Grid
+
+## Description
 
 Bourbon Neat provides a simple grid system, which you can use in your projects. 
 
@@ -26,18 +28,35 @@ In general `u-grid.scss` generates a set of grid column classes using namespaces
 
 ### Installation with Veams
 
-`veams install vu grid`
+`veams install u grid`
 
 ------------
 
-## SASS
+## Fields
 
-### Variables 
+### Grid Row
 
-- $grid-defaults {`Object`} [`(columns: 12, gutter: 52px)`] - _Default values which will be used in Neat._
-- $grid-breakpoints-defaults {`Object`} [`('mobile-s': 320px, 'mobile-xl': 657px, 'tablet-p': 768px, 'tablet-l': 1024px, 'desktop': 1440px)`] - _Default values which will be used in Neat._
-- $grid-class-col {`String`} [`is-col`] - _Column class namespace._
-- $grid-offset {`String`} [`offset`] - _Offset class namespace._
+| Option | Type | Default | Description |
+|:--- |:---:|:---:|:--- |
+|settings.gridPadding | Boolean | [`false`] | _Add the margin to the left._|
+|settings.gridClasses | String | | _Modifier classes like `is-equal-height`._| 
+
+### Grid Col
+
+| Option | Type | Default | Description |
+|:--- |:---:|:---:|:--- |
+|colClasses | String | |_Column and offset classes._|
+
+-------------
+
+## SASS Options
+
+| Option | Type | Default | Description |
+|:--- |:---:|:---:|:--- |
+| $grid-defaults | Object | [`(columns: 12, gutter: 52px)`] | _Default values which will be used in Neat._ |
+| $grid-breakpoints-defaults | Object | [`('mobile-s': 320px, 'mobile-xl': 657px, 'tablet-p': 768px, 'tablet-l': 1024px, 'desktop': 1440px)`] | _Default values which will be used in Neat._ |
+| $grid-class-col | String | [`is-col`] | _Column class namespace._ |
+| $grid-offset | String | [`offset`] | _Offset class namespace._ |
 
 ### CSS Output
 
@@ -53,19 +72,6 @@ You can add the following modifiers to `u-grid-row|is-grid-row`:
 
 ### Usage Examples
 - `is-col-mobile-s-12 is-col-mobile-xl-6 is-col-tablet-p-4 is-col-tablet-p-offset-4 is-col-tablet-l-3 is-col-tablet-l-offset-0`
-
--------------
-
-## Fields
-
-### Grid Row
-
-- settings.gridPadding {`Boolean`} [`false`] - _Add the margin to the left._
-- settings.gridClasses {`String`} - _Modifier classes like `is-equal-height`._ 
-
-### Grid Col
-
-- colClasses {`String`} - _Column and offset classes._
 
 -------------
 

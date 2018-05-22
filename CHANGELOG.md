@@ -1,3 +1,13 @@
+## Namespaced Versions
+
+### v1.0.0
+
+- Migrate to use 
+
+	**@veams/component**
+
+------------------
+
 ### v5.1.3
 - Change order of rules.
 
