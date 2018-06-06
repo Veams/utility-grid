@@ -2,7 +2,8 @@
 	"variations": {
 		"4-grid": {
 			"docs": {
-				"variationName": "4 Columns Collapsed"
+				"variationName": "4 Columns Collapsed",
+				"variationDescription": "The grid is displayed in 4 columns and contains the inner margin."
 			},
 			"settings": {
 				"gridPadding": true,
@@ -14,7 +15,8 @@
 		},
 		"3-grid": {
 			"docs": {
-				"variationName": "3 Columns"
+				"variationName": "3 Columns",
+				"variationDescription": "The grid is displayed in 3 columns and is using 'is-collapsed'. In this way we can align the grid row with the general layout."
 			},
 			"settings": {
 				"colClasses": "is-col-mobile-s-12 is-col-mobile-l-4"

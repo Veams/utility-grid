@@ -1,5 +1,6 @@
 {
 	"type": "utility",
+	"displayName": "grid",
 	"contextData": "grid",
 	"layout": "lyt-docs",
 	"subTemplates": [

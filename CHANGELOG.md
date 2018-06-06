@@ -1,5 +1,9 @@
 ## Namespaced Versions
 
+### v1.0.1
+- Rename settings file.
+- Add displayName and description. 
+
 ### v1.0.0
 
 - Migrate to use 
