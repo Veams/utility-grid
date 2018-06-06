@@ -1,6 +1,6 @@
 {
 	"name": "@veams/utility-grid",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Using the simple Bourbon Neat grid system, `u-grid` is a mobile first class based grid system like Bootstrap or Foundation, but also flexible enough to just use mixins in your Sass or SCSS files",
 	"repository": {
 		"type": "git",
