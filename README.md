@@ -53,6 +53,7 @@ In general `u-grid.scss` generates a set of grid column classes using namespaces
 
 | Option | Type | Default | Description |
 |:--- |:---:|:---:|:--- |
+| $grid-visual | Boolean | [`false`] | _You want to visualize the grid columns, then just set the value to `true`._ |
 | $grid-defaults | Object | [`(columns: 12, gutter: 52px)`] | _Default values which will be used in Neat._ |
 | $grid-breakpoints-defaults | Object | [`('mobile-s': 320px, 'mobile-xl': 657px, 'tablet-p': 768px, 'tablet-l': 1024px, 'desktop': 1440px)`] | _Default values which will be used in Neat._ |
 | $grid-class-col | String | [`is-col`] | _Column class namespace._ |
