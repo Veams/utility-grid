@@ -3,6 +3,7 @@
 ### v1.0.1
 - Rename settings file.
 - Add displayName and description. 
+- Add $grid-visual to display grid-columns. 
 
 ### v1.0.0
 
